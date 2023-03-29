@@ -13,7 +13,25 @@ public class PersonagemBuilder {
             throw new IllegalArgumentException("Id Inválido");
         }
         if (personagem.getNome().equals("")) {
-            throw new IllegalArgumentException("Nome inválido");
+            throw new IllegalArgumentException("Nome Inválido");
+        }
+        if (personagem.getForca() == 0) {
+            throw new IllegalArgumentException("Atributo de Força Inválido");
+        }
+        if (personagem.getDestreza() == 0) {
+            throw new IllegalArgumentException("Atributo de Destreza Inválido");
+        }
+        if (personagem.getConstituicao() == 0) {
+            throw new IllegalArgumentException("Atributo de Constituição Inválido");
+        }
+        if (personagem.getInteligencia() == 0) {
+            throw new IllegalArgumentException("Atributo de Inteligencia Inválido");
+        }
+        if (personagem.getSabedoria() == 0) {
+            throw new IllegalArgumentException("Atributo de Sabedoria Inválido");
+        }
+        if (personagem.getCarisma() == 0) {
+            throw new IllegalArgumentException("Atributo de Carisma Inválido");
         }
         return personagem;
     }

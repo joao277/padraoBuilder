@@ -12,7 +12,7 @@ public class PersonagemBuilderTest {
     void deveRetornarExcecaoParaPersonagemSemID() {
         try {
             PersonagemBuilder personagemBuilder = new PersonagemBuilder();
-            Personagem personagem = personagemBuilder
+            personagemBuilder
                     .setNome("Pedrin")
                     .setForca(1)
                     .setDestreza(1)
@@ -23,7 +23,7 @@ public class PersonagemBuilderTest {
                     .build();
            fail();
         } catch (IllegalArgumentException e) {
-            assertEquals(e.getMessage(), "ID inválido");
+            assertEquals(e.getMessage(), "Id Inválido");
         }
     }
 
@@ -31,7 +31,7 @@ public class PersonagemBuilderTest {
     void deveRetornarExcecaoParaPersonagemSemNome() {
         try {
             PersonagemBuilder personagemBuilder = new PersonagemBuilder();
-            Personagem personagem = personagemBuilder
+            personagemBuilder
                     .setId(1)
                     .setForca(1)
                     .setDestreza(1)
@@ -47,10 +47,10 @@ public class PersonagemBuilderTest {
     }
 
     @Test
-    void deveRetornarExcecaoParaPersonagemSemForça() {
+    void deveRetornarExcecaoParaPersonagemSemForca() {
         try {
             PersonagemBuilder personagemBuilder = new PersonagemBuilder();
-            Personagem personagem = personagemBuilder
+            personagemBuilder
                     .setId(1)
                     .setNome("Pedrin")
                     .setDestreza(1)
@@ -69,7 +69,7 @@ public class PersonagemBuilderTest {
     void deveRetornarExcecaoParaPersonagemSemDestreza() {
         try {
             PersonagemBuilder personagemBuilder = new PersonagemBuilder();
-            Personagem personagem = personagemBuilder
+            personagemBuilder
                     .setId(1)
                     .setNome("Pedrin")
                     .setForca(1)
@@ -88,7 +88,7 @@ public class PersonagemBuilderTest {
     void deveRetornarExcecaoParaPersonagemSemConstituicao() {
         try {
             PersonagemBuilder personagemBuilder = new PersonagemBuilder();
-            Personagem personagem = personagemBuilder
+            personagemBuilder
                     .setId(1)
                     .setNome("Pedrin")
                     .setForca(1)
@@ -107,7 +107,7 @@ public class PersonagemBuilderTest {
     void deveRetornarExcecaoParaPersonagemSemInteligencia() {
         try {
             PersonagemBuilder personagemBuilder = new PersonagemBuilder();
-            Personagem personagem = personagemBuilder
+            personagemBuilder
                     .setId(1)
                     .setNome("Pedrin")
                     .setForca(1)
@@ -126,7 +126,7 @@ public class PersonagemBuilderTest {
     void deveRetornarExcecaoParaPersonagemSemSabedoria() {
         try {
             PersonagemBuilder personagemBuilder = new PersonagemBuilder();
-            Personagem personagem = personagemBuilder
+            personagemBuilder
                     .setId(1)
                     .setNome("Pedrin")
                     .setForca(1)
@@ -145,7 +145,7 @@ public class PersonagemBuilderTest {
     void deveRetornarExcecaoParaPersonagemSemCarisma() {
         try {
             PersonagemBuilder personagemBuilder = new PersonagemBuilder();
-            Personagem personagem = personagemBuilder
+            personagemBuilder
                     .setId(1)
                     .setNome("Pedrin")
                     .setForca(1)
@@ -168,6 +168,12 @@ public class PersonagemBuilderTest {
         Personagem personagem = personagemBuilder
             .setId(1)
             .setNome("Pedrin")
+            .setForca(1)
+            .setDestreza(1)
+            .setConstituicao(1)
+            .setInteligencia(1)
+            .setSabedoria(1)
+            .setCarisma(1)
             .build();
 
         assertNotNull(personagem);
